@@ -1,0 +1,37 @@
+{{define "header"}}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{{.title}}</title>
+		<style>
+		.background{
+		
+		}
+		.container{
+		width: 800px;
+		margin: 0 auto;
+		}
+		.title{
+		padding: 4px 5px;
+		font-family: cursive;
+		font-size: 110%;
+		}
+		.content{
+		padding: 4px 5px;
+		}
+		.links_label{
+		border: 1px #c2c2c2 solid;
+		padding: 4px 5px;
+		background-color: #f2f2f2;
+		}
+		.links_items div{
+		display: inline-block;
+		margin: 5px 3px;
+		}
+		</style>
+		{{.include}}
+	</head>
+	<body>
+		<div class="background">
+			<div class="container">
+{{end}}

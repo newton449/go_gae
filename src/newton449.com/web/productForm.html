@@ -1,0 +1,10 @@
+{{template "header"}}
+<form action="{{.formUrl}}" method="POST">
+	<div class="title">{{.title}}</div>
+	{{if .fields.id}}<input type="hidden" name="id" value="{{.fields.id}}">{{end}}
+	<div class="content">Title: <input name="title" type="text" value="{{if .fields.title}}{{.fields.title}}{{end}}"></input></div>
+	<div class="content">Body: <textarea name="body">{{if .fields.body}}{{.fields.body}}{{end}}</textarea></div>
+	{{if .errMsg}}<div>Error: {{.errMsg}}</div>{{end}}
+	<div class="content"><input type="submit" value="Submit"></div>
+</form>
+{{template "footer"}}

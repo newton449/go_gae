@@ -1,0 +1,15 @@
+{{template "header"}}
+{{$p := .product}}
+<div class="title">Product Detail</div>
+<div class="content">Id: {{$p.Id}}</div>
+<div class="content">Title: {{$p.Title}}</div>
+<div class="content">Body: {{$p.Body}}</div>
+<div class="content">
+	Actions: <a href="/web/products/actions/editing?id={{$p.Id}}">Edit</a>
+	<form name="delete_form" action="/web/products/actions/delete" method="POST" style="display: inline;">
+		<input type="hidden" name="id" value="{{$p.Id}}">
+		<a href="javascript:;" onclick="if(confirm('Delete the product?')) document.delete_form.submit();">Delete</a>
+	</form>
+</div>
+{{template "links"}}
+{{template "footer"}}

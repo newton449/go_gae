@@ -1,0 +1,9 @@
+{{template "header"}}
+<div class="title">Product List</div>
+{{range .list}}
+	<div class="content"><a href="/web/products/{{.Id}}">{{.Title}}</a></div>
+{{else}}
+	<div class="content">No products.</div>
+{{end}}
+{{template "links"}}
+{{template "footer"}}
